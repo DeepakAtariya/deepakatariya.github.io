@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Atariya | Homepage</title>
+  <meta name="description" content="Personal GitHub homepage for Deepak Atariya" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2b;
+      --panel-soft: #0f1726;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #eef2ff;
+      --muted: #9aa7bd;
+      --accent: #7dd3fc;
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      background-image: linear-gradient(to bottom, #0d1324, #0b1020);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1000px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 16px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 28px;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--accent);
+      background: rgba(125, 211, 252, 0.08);
+      border: 1px solid rgba(125, 211, 252, 0.16);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 60ch;
+      margin: 0 0 18px;
+    }
+
+    .typing-row {
+      font-size: 17px;
+      margin-bottom: 20px;
+      min-height: 28px;
+      color: #dbe7f5;
+    }
+
+    .typing {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      padding: 11px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 600;
+      transition: 160ms ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #07111f;
+      border-color: transparent;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      background: var(--panel-soft);
+    }
+
+    .profile {
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+    }
+
+    .profile h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+
+    .profile p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+    }
+
+    .stat .num {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .stat .label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .section .card {
+      padding: 22px;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .section p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding: 16px 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    @media (max-width: 920px) {
+      .hero, .section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 20px, 1000px);
+      }
+
+      .hero-main, .hero-side, .section .card {
+        padding: 18px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">Deepak Atariya</div>
+      <div class="nav-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourusername/" target="_blank">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="card hero-main">
+        <div class="tag">Open to software engineering opportunities</div>
+        <h1>Building backend systems, APIs, and practical developer products.</h1>
+        <p class="lead">
+          I am <strong>Deepak Atariya</strong>, a software engineer focused on Node.js,
+          TypeScript, distributed systems, fintech platforms, and product-minded engineering.
+          This version is intentionally simpler, cleaner, and more professional.
+        </p>
+
+        <div class="typing-row">
+          I’m <span class="typing" id="typing"></span><span class="cursor">|</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/yourusername/" target="_blank">LinkedIn</a>
+          <a class="btn btn-secondary" href="mailto:you@example.com">Contact</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Node.js</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">System Design</span>
+          <span class="chip">Fintech</span>
+        </div>
+      </div>
+
+      <aside class="card hero-side">
+        <div class="profile">
+          <h2>Deepak Atariya</h2>
+          <p>Software Engineer • UAE<br />Backend, architecture, and product-focused engineering</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">5+</div>
+            <div class="label">Skill areas</div>
+          </div>
+          <div class="stat">
+            <div class="num">10+</div>
+            <div class="label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="num">4+</div>
+            <div class="label">Years coding</div>
+          </div>
+          <div class="stat">
+            <div class="num">1</div>
+            <div class="label">Clear focus</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>What I do</h3>
+        <p>
+          I build backend services, internal tools, and APIs with a strong focus on
+          reliability, maintainability, and business value.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What I’m exploring</h3>
+        <p>
+          Solution architecture, AI-enhanced engineering workflows, and small SaaS
+          products that solve practical problems.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Why this version</h3>
+        <p>
+          It keeps the developer feel, but removes the flashy visual effects so the
+          homepage looks more mature and professional.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Made for GitHub Pages • Replace links, text, and stats with your own details.
+    </footer>
+  </div>
+
+  <script>
+    const roles = [
+      'a Software Engineer',
+      'a Node.js Backend Developer',
+      'a Solution Architecture Learner',
+      'building SaaS products'
+    ];
+
+    const typingEl = document.getElementById('typing');
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function tick() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        typingEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          return setTimeout(tick, 1200);
+        }
+      } else {
+        charIndex--;
+        typingEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(tick, deleting ? 35 : 65);
+    }
+
+    tick();
+  </script>
+</body>
+</html>
