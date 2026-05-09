@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepak Atariya | Software Engineer</title>
-  <meta name="description" content="Deepak Atariya — Software Engineer specialising in scalable backend systems, fintech platforms, and AI-driven systems. Dubai, UAE." />
+  <title>Deepak Atariya | Senior Backend Engineer</title>
+  <meta name="description" content="Deepak Atariya — Senior Backend Engineer specialising in fintech, distributed systems, and AI-driven backend platforms. Currently at Emirates NBD on CBUAE-regulated Open Finance. Dubai, UAE." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -529,6 +529,182 @@
       color: var(--text-secondary);
     }
 
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 32px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .exp-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px 16px;
+      margin-bottom: 6px;
+    }
+
+    .exp-role {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .exp-dates {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .exp-bullets li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .exp-bullets li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+      top: 1px;
+    }
+
+    .exp-bullets li:last-child { margin-bottom: 0; }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+    }
+
+    .project-card .project-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .project-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    /* Education */
+    .education-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 80px;
+    }
+
+    .edu-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .edu-item:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .edu-main {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .edu-degree {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .edu-school {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .edu-dates {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+
     /* Tech Stack */
     .tech-stack {
       margin-bottom: 80px;
@@ -603,6 +779,7 @@
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .skills-grid { grid-template-columns: repeat(2, 1fr); }
       .cards-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -632,6 +809,9 @@
       <div class="logo">DA</div>
       <div class="nav-links">
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#about">About</a>
         <a href="https://github.com/DeepakAtariya" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/deepakatariya/" target="_blank">LinkedIn</a>
@@ -651,8 +831,7 @@
           I build <span class="gradient-text">scalable backend systems</span>.
         </h1>
         <p class="hero-desc">
-          Software Engineer specialising in scalable backend systems and fintech platforms, with hands-on experience in
-          microservices architecture, API design, and distributed systems. Currently contributing to open finance initiatives at Emirates NBD.
+          Senior Backend Engineer with 7+ years building scalable, event-driven systems for fintech, banking, and high-throughput data platforms. Currently leading backend design for the CBUAE-regulated Open Finance platform at Emirates NBD — powering ENBD X and Liv X. Track record of architectural decisions that ship measurable outcomes: 75% memory reduction, 45% cloud cost savings, 10x search performance, 4x faster dataset processing.
         </p>
         <div class="typing-row">
           <span class="prompt">$</span>
@@ -678,7 +857,7 @@
       <div class="profile-card">
         <div class="avatar">DA</div>
         <h2>Deepak Atariya</h2>
-        <p class="role">Software Engineer</p>
+        <p class="role">Senior Backend Engineer</p>
         <p class="location">Dubai, UAE</p>
         <div class="profile-stats">
           <div class="profile-stat">
@@ -690,7 +869,7 @@
             <div class="label">Projects</div>
           </div>
           <div class="profile-stat">
-            <div class="num">5+</div>
+            <div class="num">20+</div>
             <div class="label">Tech Stack</div>
           </div>
         </div>
@@ -720,29 +899,133 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-4.96.44H2.5A2.5 2.5 0 010 17.5V7a2.5 2.5 0 012.5-2.5h4.56A2.5 2.5 0 019.5 2z"/><polyline points="13 2 18 2 18 7"/><line x1="18" y1="2" x2="9.5" y2="10.5"/></svg>
           </div>
           <h3>Backend Development</h3>
-          <p>Node.js, NestJS, Spring Boot, Django — microservices & API design</p>
+          <p>Node.js, NestJS, Java, Spring Boot, Python — microservices and API design (REST, gRPC).</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon" style="background: rgba(129, 140, 248, 0.1); color: var(--accent-2);">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>TypeScript</h3>
-          <p>Type-safe code, advanced generics, strict configurations</p>
+          <h3>Distributed Systems</h3>
+          <p>Apache Kafka, AWS SQS, event-driven microservices, CQRS, idempotent processing.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon" style="background: rgba(167, 139, 250, 0.1); color: var(--accent-3);">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
           </div>
-          <h3>System Design</h3>
-          <p>Distributed systems, event-driven architecture, Kafka</p>
+          <h3>Cloud & Performance</h3>
+          <p>AWS (ECS, ECR, Batch, Lambda, SQS, S3), CI/CD, performance engineering, memory-leak detection.</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon" style="background: rgba(52, 211, 153, 0.1); color: var(--green);">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           </div>
           <h3>Open Finance & Fintech</h3>
-          <p>CBUAE-regulated platforms, payment systems, consent flows, data sharing</p>
+          <p>CBUAE-regulated platforms, consent management, account information sharing, payment initiation.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="reveal">
+      <div class="section-header">
+        <p class="section-label">Experience</p>
+        <h2>Where I've Built</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Senior Software Engineer — Open Finance &amp; AI Platform</div>
+            <div class="exp-dates">Nov 2024 – Present</div>
+          </div>
+          <div class="exp-company">Emirates NBD (via Synechron) · Dubai, UAE</div>
+          <ul class="exp-bullets">
+            <li>Architected backend services for the CBUAE-regulated Open Finance platform (Comply &amp; Compete flows) powering ENBD X and Liv X — secure consent management, account information sharing, and payment initiation for thousands of retail banking users.</li>
+            <li>Designed event-driven microservices in TypeScript/Node.js with Apache Kafka for high-volume financial transactions with idempotency, replay safety, and SLA-bound latency; defined contracts consumed by 5+ downstream teams.</li>
+            <li>Established platform-wide memory-leak detection guidelines and performance-testing protocols that reduced median API latency and eliminated recurring OOM incidents.</li>
+            <li>Led end-to-end Playwright test automation across critical consent and payment journeys, cutting production defects by 40% and shortening release sign-off cycles by ~30%.</li>
+            <li>Built an internal code-quality dashboard integrating Checkmarx and SonarQube with one-click auto-fix, giving engineering managers a live view of quality scores across 10+ squads.</li>
+            <li>Shipped a desktop Git operations tool for standardising release tracking across production and non-production environments, reducing release coordination overhead by ~50%.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Software Engineer — Data Platforms &amp; Cloud Infrastructure</div>
+            <div class="exp-dates">Sep 2022 – Sep 2024</div>
+          </div>
+          <div class="exp-company">Morningstar · Gurugram, India</div>
+          <ul class="exp-bullets">
+            <li>Designed a multi-tenant CLI processing 2–5 GB financial data files daily; replaced load-in-memory with streaming architecture, reducing memory footprint by 75% and unblocking larger client workloads.</li>
+            <li>Architected a serverless data pipeline on AWS ECS, ECR, and Batch using the choreography pattern — cut infrastructure cost by 45% while sustaining 99.9% uptime.</li>
+            <li>Re-designed data-sharding strategy for large-dataset jobs, taking end-to-end processing from 8 hours to 2 hours (4x improvement) without adding compute capacity.</li>
+            <li>Built a reusable, generic SFTP downloader package adopted by 5+ teams as the standard for secure external file transfer.</li>
+            <li>Automated CI/CD with Jenkins and SonarQube quality gates, reducing deployment time by 60%.</li>
+            <li>Led migration of a legacy C# service to Node.js, including bug triage and cutover planning for zero-downtime release.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Software Engineer — High-Throughput Systems</div>
+            <div class="exp-dates">May 2021 – Aug 2022</div>
+          </div>
+          <div class="exp-company">RNF Technologies · Noida, India</div>
+          <ul class="exp-bullets">
+            <li>Built a lead-generation platform on Elasticsearch with Lucene queries, improving search performance by 10x over the previous SQL implementation.</li>
+            <li>Implemented a batch-processing system in Node.js and MongoDB handling 1M+ records daily, using compound indexes and bulk-write strategies.</li>
+            <li>Built an automated email scheduler on AWS SQS and Lambda with connection pooling, reliably delivering 50K+ emails per day with retry and dead-letter handling.</li>
+            <li>Reduced critical database query response times from 2s to 200ms (10x) through targeted indexing and query restructuring.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Web Application Developer</div>
+            <div class="exp-dates">Sep 2019 – May 2021</div>
+          </div>
+          <div class="exp-company">TERI — The Energy and Resources Institute · New Delhi, India</div>
+          <ul class="exp-bullets">
+            <li>Led system design for 3+ enterprise applications serving 10K+ users on Angular, Laravel, Django, and Flask — improved system uptime to 99% and cut average page load time by 35%.</li>
+            <li>Designed normalised schemas with ORM-backed data access across 20+ entities, ensuring data integrity and stable performance on mixed read/write workloads.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="reveal">
+      <div class="section-header">
+        <p class="section-label">Selected Work</p>
+        <h2>Projects &amp; Writing</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <span class="project-tag">Internal Platform</span>
+          <h3>ENBD Code Quality Dashboard</h3>
+          <p>Unified Checkmarx and SonarQube APIs into an engineering-manager dashboard with one-click auto-fix for common violations, giving leadership a live view of code health across squads.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag">Developer Tool</span>
+          <h3>Git Release GUI</h3>
+          <p>Desktop tool for managing and auditing code movement across production and non-production environments, adopted by the release team to standardise release tracking.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag">AI / Side Project</span>
+          <h3>RAG Knowledge Assistant</h3>
+          <p>Internal RAG-based assistant built with Node.js, LangChain, and a vector database over engineering documentation — exploring AI-assisted developer workflows.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag">Writing</span>
+          <h3>“Let's Develop Better” Newsletter</h3>
+          <p>Author of a newsletter on software engineering best practices, design patterns, and scalable system architecture — sharing what I learn building production systems.</p>
+        </div>
+
       </div>
     </section>
 
@@ -781,18 +1064,62 @@
         <span class="tech-chip"><span class="dot" style="background: #68a063;"></span> Node.js</span>
         <span class="tech-chip"><span class="dot" style="background: #3178c6;"></span> TypeScript</span>
         <span class="tech-chip"><span class="dot" style="background: #e0234e;"></span> NestJS</span>
+        <span class="tech-chip"><span class="dot" style="background: #007396;"></span> Java</span>
         <span class="tech-chip"><span class="dot" style="background: #6db33f;"></span> Spring Boot</span>
         <span class="tech-chip"><span class="dot" style="background: #3776ab;"></span> Python</span>
-        <span class="tech-chip"><span class="dot" style="background: #61dafb;"></span> React</span>
-        <span class="tech-chip"><span class="dot" style="background: #231f20;"></span> Kafka</span>
+        <span class="tech-chip"><span class="dot" style="background: #092e20;"></span> Django</span>
+        <span class="tech-chip"><span class="dot" style="background: #000000;"></span> Flask</span>
+        <span class="tech-chip"><span class="dot" style="background: #ff2d20;"></span> PHP / Laravel</span>
+        <span class="tech-chip"><span class="dot" style="background: #231f20;"></span> Apache Kafka</span>
         <span class="tech-chip"><span class="dot" style="background: #ff9900;"></span> AWS</span>
         <span class="tech-chip"><span class="dot" style="background: #4479a1;"></span> MySQL</span>
-        <span class="tech-chip"><span class="dot" style="background: #47a248;"></span> MongoDB</span>
+        <span class="tech-chip"><span class="dot" style="background: #cc2927;"></span> SQL Server</span>
+        <span class="tech-chip"><span class="dot" style="background: #47a248;"></span> MongoDB / DocumentDB</span>
         <span class="tech-chip"><span class="dot" style="background: #005571;"></span> Elasticsearch</span>
+        <span class="tech-chip"><span class="dot" style="background: #5e87b0;"></span> TrinoDB</span>
         <span class="tech-chip"><span class="dot" style="background: #2496ed;"></span> Docker</span>
-        <span class="tech-chip"><span class="dot" style="background: #dc382d;"></span> Redis</span>
-        <span class="tech-chip"><span class="dot" style="background: #f05032;"></span> CI/CD</span>
+        <span class="tech-chip"><span class="dot" style="background: #244c5a;"></span> gRPC</span>
+        <span class="tech-chip"><span class="dot" style="background: #d33833;"></span> Jenkins</span>
+        <span class="tech-chip"><span class="dot" style="background: #0066ff;"></span> Harness</span>
+        <span class="tech-chip"><span class="dot" style="background: #4e9bcd;"></span> SonarQube</span>
+        <span class="tech-chip"><span class="dot" style="background: #45ba4b;"></span> Playwright</span>
         <span class="tech-chip"><span class="dot" style="background: #a78bfa;"></span> RAG / LangChain</span>
+        <span class="tech-chip"><span class="dot" style="background: #f472b6;"></span> Vector Databases</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="reveal">
+      <div class="section-header">
+        <p class="section-label">Education</p>
+        <h2>Where I Studied</h2>
+      </div>
+      <div class="education-list">
+
+        <div class="edu-item">
+          <div class="edu-main">
+            <div class="edu-degree">Master of Computer Applications (MCA)</div>
+            <div class="edu-school">Indira Gandhi National Open University, India</div>
+          </div>
+          <div class="edu-dates">Jun 2018 – Jun 2020</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-main">
+            <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+            <div class="edu-school">Indira Gandhi National Open University, India</div>
+          </div>
+          <div class="edu-dates">Jun 2015 – Jun 2019</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-main">
+            <div class="edu-degree">Machine Learning for Engineering &amp; Science Applications</div>
+            <div class="edu-school">IIT Madras</div>
+          </div>
+          <div class="edu-dates">Jun 2019 – Jun 2020</div>
+        </div>
+
       </div>
     </section>
 
@@ -809,9 +1136,9 @@
     const phrases = [
       'building open finance platforms',
       'designing event-driven microservices',
-      'writing clean TypeScript',
-      'architecting distributed systems',
-      'exploring RAG workflows'
+      'cutting cloud cost by 45%',
+      'shipping 10x search performance',
+      'exploring RAG and AI workflows'
     ];
 
     const typingEl = document.getElementById('typing');
